@@ -7,10 +7,7 @@ from idmtools.entities.experiment import Experiment
 
 # emodpy
 import emodpy.emod_task as emod_task
-from emodpy.utils import EradicationBambooBuilds
-from emodpy.bamboo import get_model_files
 from idmtools.builders import SimulationBuilder
-# importing all the reports functions, they all start with add_
 from emodpy_malaria.reporters.builtin import *
 
 import manifest

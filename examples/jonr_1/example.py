@@ -9,14 +9,9 @@ from idmtools.assets import Asset, AssetCollection  #
 from idmtools.builders import SimulationBuilder
 from idmtools.core.platform_factory import Platform
 from idmtools.entities.experiment import Experiment
-# from idmtools_platform_comps.utils.python_requirements_ac.requirements_to_asset_collection import RequirementsToAssetCollection
-# from idmtools_models.templated_script_task import get_script_wrapper_unix_task
-
 # emodpy
 from emodpy.emod_task import EMODTask
-from emodpy.utils import EradicationBambooBuilds
-from emodpy.bamboo import get_model_files
-import emod_api.config.default_from_schema_no_validation as dfs
+
 from emodpy_malaria.reporters.builtin import *
 
 import params

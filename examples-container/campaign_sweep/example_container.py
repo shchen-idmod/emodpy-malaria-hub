@@ -7,7 +7,6 @@ from functools import \
     partial  # for setting Run_Number. In Jonathan Future World, Run_Number is set by dtk_pre_proc based on generic param_sweep_value...
 
 # idmtools ...
-from idmtools.assets import Asset, AssetCollection  #
 from idmtools.builders import SimulationBuilder
 from idmtools.core.platform_factory import Platform
 from idmtools.entities.experiment import Experiment
@@ -15,7 +14,7 @@ from idmtools.entities.experiment import Experiment
 # emodpy
 import emodpy.emod_task as emod_task
 from emodpy.utils import EradicationBambooBuilds
-from emodpy.bamboo import get_model_files
+
 from emodpy_malaria.reporters.builtin import ReportVectorGenetics, ReportVectorStats
 import emod_api.config.default_from_schema_no_validation as dfs
 

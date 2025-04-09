@@ -1,0 +1,117 @@
+# 🧪 emodpy-malaria Dev Container
+
+This dev container sets up a ready-to-use environment for working on the `emodpy-malaria` project using [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) or [GitHub Codespaces](https://docs.github.com/en/codespaces/overview).
+
+---
+
+## 🐳 What's Inside
+
+This dev container is built on top of the **universal base image**:
+
+- `mcr.microsoft.com/devcontainers/universal:2`
+
+It includes:
+
+### ✨ Features Enabled
+
+| Tool / Language | Version       | Notes                            |
+|-----------------|---------------|----------------------------------|
+| Python          | 3.11          | With JupyterLab                  |
+| Docker-in-Docker| -             | Enables Docker inside container  |
+| Node.js         | 20            | Useful for web-related tooling   |
+| Ruby            | 3.3           |                                  |
+| Pandoc          | Latest        | Document conversion              |
+| Quarto CLI      | Latest        | Scientific/technical publishing  |
+
+---
+
+## 💻 VS Code Extensions Installed
+
+| Extension                   | Purpose                       |
+|----------------------------|-------------------------------|
+| `ms-python.python`         | Python language support       |
+| `ms-python.debugpy`        | Python debugging              |
+| `ms-toolsai.jupyter`       | Jupyter Notebooks             |
+| `ritwickdey.LiveServer`    | Live reload for web dev       |
+| `esbenp.prettier-vscode`   | Code formatting               |
+| `redhat.vscode-yaml`       | YAML syntax and validation    |
+
+---
+
+## 🛠️ Post-Creation Script
+
+After the container is built, the following script is automatically executed:
+
+```bash
+.devcontainer/setup.sh
+```
+This script installs emodpy-malaria and its dependencies, as well as any additional tools you may need.
+We also installs the latest idmtools to override the old versions of idmtools in emodpy-malaria.
+Note, in setup.sh, we install emodpy-malaria from source, you can change this to install from jfrog repository.
+---
+
+## 🚀 Getting Started to build dev container in local VS Code
+
+1. Install [Docker](https://www.docker.com/products/docker-desktop)
+2. Install [Visual Studio Code](https://code.visualstudio.com/)
+3. Install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+4. Open the project folder in VS Code
+5. Press `F1` and run: `Dev Containers: Rebuild Container`
+6. Wait for the container to build and start
+7. Open a terminal in VS Code
+8. Run your Python scripts or Jupyter notebooks as needed
+
+## 🛠️ Getting Started to build dev container in GitHub Codespaces
+1. Open the project in GitHub Codespaces
+2. Wait for the container to build and start
+3. Open a terminal in Codespaces
+4. Run your Python scripts or Jupyter notebooks as needed
+
+
+## 📊 Plot InsetChart for Container Platform Examples
+
+This guide helps you visualize `InsetChart.json` output from simulations run via the container platform examples.
+
+### 🧪 Steps
+
+1. **Run a container platform example**
+
+   Navigate to the `examples-container/` directory and run the desired simulation:
+
+   ```bash
+   cd examples-container
+   # Run your example here, e.g.
+   python my_simulation.py
+   ```
+2. **Locate the simulation results**
+
+    After the run completes, go to the directory where the results were saved. This will typically look like:
+    ```bash
+    cd path/to/job_directory/suite
+    ```
+
+3. **Add the plotting script**
+
+   Copy the `plot_insetchart.py` file from the `examples-container/` directory to your simulation results directory. This script will generate the inset chart plots.
+
+4. **Edit the script**
+
+   Open the `plot_insetchart.py` file in your favorite text editor or IDE. You may need to adjust the paths to the simulation results and the output directory for the plots.
+
+5. **Run the script**
+Execute the script to generate the inset chart plots. You can do this from the command line:
+    
+    ```bash
+    python plot_insetchart.py
+    ```
+    
+    Alternatively, run the script directly in the interactive environment.
+    In VS Code:
+
+     - Open plot_insetchart.py
+
+     - Press F1 (or Cmd+Shift+P on macOS)
+
+     - Select "Python: Run Current File in Interactive Window"
+
+    This will generate the inset chart plots in the interactive output pane.
