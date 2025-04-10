@@ -41,7 +41,7 @@ It includes:
 After the container is built, the `setup.sh` script is executed. This script performs the following tasks:
  - Install emodpy-malaria and its dependencies, as well as any additional tools you may need. 
  - Install the latest version of idmtools to override any older versions included with emodpy-malaria.
-Note, in setup.sh, we install emodpy-malaria from source, you can change this to install from jfrog repository.
+ - Note, in setup.sh, we install emodpy-malaria from source, you can change this to install from jfrog repository.
 
 ---
 
