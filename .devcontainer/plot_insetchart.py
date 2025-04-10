@@ -11,7 +11,15 @@ import matplotlib.pyplot as plt
 # Load JSON data from file
 CURRENT_DIRECTORY = os.path.dirname(__file__)  # drop this file under suite directory
 if "params" not in globals():
-    params = {"dataset": f"{CURRENT_DIRECTORY}/all_reports_example_97357c05-fbba-4f72-9506-6b9daca29cc9/994ead91-cd2b-4808-b162-d03743da7a68/output/InsetChart.json"}  # Fallback for debugging
+    params = {
+        "dataset": os.path.join(
+            CURRENT_DIRECTORY,
+            "all_reports_example_97357c05-fbba-4f72-9506-6b9daca29cc9",
+            "994ead91-cd2b-4808-b162-d03743da7a68",
+            "output",
+            "InsetChart.json"
+        )
+    }
 file = params["dataset"]
 with open(params["dataset"]) as f:
     data = json.load(f)
@@ -19,14 +27,6 @@ with open(params["dataset"]) as f:
 # Convert JSON to a Pandas DataFrame
 df = pd.json_normalize(data)
 
-# Display the DataFrame as a table
-df
-
-# Import Plotly for visualization
-#import plotly.express as px
-
-# Create a bar chart
-#fig = px.bar(df, x="Header.Channels", y="Header.Timesteps", title="Channels by Timesteps")
 # Extract the header and channels
 header = data['Header']
 channels = data['Channels']

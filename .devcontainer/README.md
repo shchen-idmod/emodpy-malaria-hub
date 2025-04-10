@@ -18,8 +18,6 @@ It includes:
 |-----------------|---------------|----------------------------------|
 | Python          | 3.11          | With JupyterLab                  |
 | Docker-in-Docker| -             | Enables Docker inside container  |
-| Node.js         | 20            | Useful for web-related tooling   |
-| Ruby            | 3.3           |                                  |
 | Pandoc          | Latest        | Document conversion              |
 | Quarto CLI      | Latest        | Scientific/technical publishing  |
 
@@ -68,7 +66,7 @@ Note, in setup.sh, we install emodpy-malaria from source, you can change this to
 4. Run your Python scripts or Jupyter notebooks as needed
 
 
-## 📊 Plot InsetChart for Container Platform Examples
+## 📊 Plot InsetChart.json for Container Platform Examples
 
 This guide helps you visualize `InsetChart.json` output from simulations run via the container platform examples.
 
@@ -79,35 +77,27 @@ This guide helps you visualize `InsetChart.json` output from simulations run via
    Navigate to the `examples-container/` directory and run the desired simulation:
 
    ```bash
-   cd examples-container
+   cd examples-container/add_reports
    # Run your example here, e.g.
-   python my_simulation.py
+   python example_container.py
    ```
 2. **Locate the simulation results**
 
-    After the run completes, go to the directory where the results were saved. This will typically look like:
-    ```bash
-    cd path/to/job_directory/suite
-    ```
-
+   After the run completes, go to the directory where the results were saved. This will typically look like:
+   ```bash
+   cd path/to/job_directory/suite/experiment
+   ```
 3. **Add the plotting script**
 
-   Copy the `plot_insetchart.py` file from the `examples-container/` directory to your simulation results directory. This script will generate the inset chart plots.
+   Copy the `plot_insetchart.py` or `plot_insetchart_dropdown.py` file from the `.devcontainer` directory to your result's experiment directory. 
 
 4. **Edit the script**
 
-   Open the `plot_insetchart.py` file in your favorite text editor or IDE. You may need to adjust the paths to the simulation results and the output directory for the plots.
+   Open the above file in your favorite text editor or IDE. You may need to adjust the paths to the simulation results and the output directory for the plots.
 
 5. **Run the script**
-Execute the script to generate the inset chart plots. You can do this from the command line:
-    
-    ```bash
-    python plot_insetchart.py
-    ```
-    
-    Alternatively, run the script directly in the interactive environment.
-    In VS Code:
 
+   Execute the script run the script directly in the interactive environment
      - Open plot_insetchart.py
 
      - Press F1 (or Cmd+Shift+P on macOS)
