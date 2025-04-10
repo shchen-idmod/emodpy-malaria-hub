@@ -1,3 +1,7 @@
+# This script is used to plot each channel with dropdown for InsetChart.json for selected simulation.
+# Drop this file under the result's job_directory/suite/experiment directory. 
+# and replace the simulation id with your simulation id.
+
 # Import necessary libraries
 import json
 import pandas as pd
@@ -7,13 +11,13 @@ import ipywidgets as widgets
 from IPython.display import display, clear_output
 
 # Define the path to the JSON file
+# CURRENT_DIRECTORY is the result's path: job_directory/suite/experiment
 CURRENT_DIRECTORY = os.path.dirname(__file__)
 if "params" not in globals():
     params = {
         "dataset": os.path.join(
             CURRENT_DIRECTORY,
-            "all_reports_example_97357c05-fbba-4f72-9506-6b9daca29cc9",
-            "994ead91-cd2b-4808-b162-d03743da7a68",
+            "994ead91-cd2b-4808-b162-d03743da7a68", # replace with your simulation_id 
             "output",
             "InsetChart.json"
         )
