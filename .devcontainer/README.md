@@ -57,11 +57,19 @@ Note, in setup.sh, we install emodpy-malaria from source, you can change this to
 8. Run your Python scripts or Jupyter notebooks as needed
 
 ## 🛠️ Getting Started to build dev container in GitHub Codespaces
-1. Open the project in GitHub Codespaces
-2. Wait for the container to build and start
-3. Open a terminal in Codespaces
-4. Run your Python scripts or Jupyter notebooks as needed
+![](assets/codespace.PNG)
+1. Open the project in GitHub Codespaces tab
+2. Select "+" to create a new codespace on the selected branch
+3. Or select an existing codespace to open in browser
+4. Wait for the container to build and start
+5. Open a terminal in Codespaces
+6. Run your Python scripts or Jupyter notebooks as needed
 
+### 🧪 Example Run 
+![](assets/example_run.PNG)
+
+### 🧪 Example debugging
+![](assets/example_debug.PNG)
 
 ## 📊 Plot InsetChart.json for Container Platform Examples
 
@@ -70,7 +78,6 @@ This guide helps you visualize `InsetChart.json` output from simulations run via
 ### 🧪 Steps
 
 1. **Run a container platform example**
-
    Navigate to the `examples-container/` directory and run the desired simulation:
 
    ```bash
@@ -102,3 +109,5 @@ This guide helps you visualize `InsetChart.json` output from simulations run via
      - Select "Python: Run Current File in Interactive Window"
 
     This will generate the inset chart plots in the interactive output pane.
+![](assets/example_plot_run.PNG)
+![](assets/example_plot.PNG)
